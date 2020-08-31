@@ -1,0 +1,100 @@
+#ApesCropsTiles {
+	cursor: pointer;
+	white-space: nowrap;
+	height: 25%;
+	width: 15%;
+	margin-top: 80px;
+	margin-left: 340px;
+	background-color: white /*rgba(250, 245, 245, 0.932);*/;
+	text-align: center;
+	border-radius: 7px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	position: absolute;
+	word-break: break-all;
+	word-wrap: break-word;
+	top: 0px;
+	line-height: 150px;
+}
+
+
+#ApesLivestockTiles {
+	cursor: pointer;
+	white-space: nowrap;
+	height: 25%;
+	width: 15%;
+	margin-top: 80px;
+	margin-left: 550px;
+	background-color: white;
+	text-align: center;
+	border-radius: 7px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	position: absolute;
+	word-break: break-all;
+	word-wrap: break-word;
+	top: 0px;
+	line-height: 150px;
+}
+
+#AmisTiles {
+	cursor: pointer;
+	white-space: nowrap;
+	height: 25%;
+	width: 15%;
+	margin-top: 80px;
+	margin-left: 760px;
+	background-color: white;
+	text-align: center;
+	border-radius: 7px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	position: absolute;
+	word-break: break-all;
+	word-wrap: break-word;
+	top: 0px;
+	line-height: 150px;
+}
+
+#CarryOverStocksTiles {
+	cursor: pointer;
+	white-space: nowrap;
+	height: 25%;
+	width: 15%;
+	margin-top: 250px;
+	margin-left: 340px;
+	background-color: white;
+	text-align: center;
+	border-radius: 7px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	position: absolute;
+	word-break: break-all;
+	word-wrap: break-word;
+	top: 0px;
+	line-height: 150px;
+}
+
+#OtherTiles{
+	cursor: pointer;
+	white-space: nowrap;
+	height: 25%;
+	width: 15%;
+	margin-top: 250px;
+	margin-left: 550px;
+	background-color: white;
+	text-align: center;
+	border-radius: 7px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	position: absolute;
+	word-break: break-all;
+	word-wrap: break-word;
+	top: 0px;
+	line-height: 150px;
+}
