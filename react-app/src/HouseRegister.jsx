@@ -66,7 +66,6 @@ export default class HouseRegister extends Component {
 				</div>
 
 				<Button
-					id="jack"
 					variant="outlined"
 					color="primary"
 					size="large"

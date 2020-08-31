@@ -64,7 +64,6 @@ export default class RapidFood extends Component {
 					</div>
 				</div>
 				<Button
-					id="jack"
 					variant="outlined"
 					color="primary"
 					size="large"

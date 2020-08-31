@@ -65,7 +65,7 @@ export default class LivestockPrograms extends Component {
 				</div>
 
 				<Button
-					id="jack"
+				
 					variant="outlined"
 					color="primary"
 					size="large"

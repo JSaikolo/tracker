@@ -64,7 +64,6 @@ export default class postHarvest extends Component {
 					</div>
 				</div>
 				<Button
-					id="jack"
 					variant="outlined"
 					color="primary"
 					size="large"

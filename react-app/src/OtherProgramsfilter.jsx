@@ -86,7 +86,6 @@ export default class OtherProgramsfilter extends Component {
 					</div>
 				</div>
 				<Button
-					id="jack"
 					variant="outlined"
 					color="primary"
 					size="large"

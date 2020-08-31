@@ -65,7 +65,6 @@ export default class ThemesTesting extends Component {
 				</div>
 
 				<Button
-					id="jack"
 					variant="outlined"
 					color="primary"
 					size="large"

@@ -66,7 +66,6 @@ export default class CarryOverStocks extends Component {
 				</div>
 
 				<Button
-					id="jack"
 					variant="outlined"
 					color="primary"
 					size="large"
