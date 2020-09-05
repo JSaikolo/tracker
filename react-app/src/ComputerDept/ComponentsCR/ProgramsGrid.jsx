@@ -9,7 +9,7 @@ import PostHarvestTab from "./PostHarvestTab";
 import RapidFoodTab from "./RapidFoodTab";
 import LivestockTab from "./LivestockTab";
 import OtherProgramsfilterTab from "./OtherProgramsfilterTab";
-import TestProgramsTab from "./TestProgramsTab";
+import AmisProTab from "./AmisProTab";
 
 function Apes() {
 	render(
@@ -35,6 +35,14 @@ function otherprogramTab() {
 	);
 }
 
+function amisTab() {
+	render(
+		<div>
+			<AmisProTab />
+		</div>
+	);
+}
+
 function carryoverTab() {
 	render(
 		<div>
@@ -51,13 +59,7 @@ function livestock() {
 	);
 }
 
-function testPrograms() {
-	render(
-		<div>
-			<TestProgramsTab />
-		</div>
-	);
-}
+
 function postHarvest() {
 	render(
 		<div>
@@ -75,7 +77,6 @@ function rapidFood() {
 }
 
 const ProgramGrid = () => {
-	
 	const ApesTab = () => {
 		var div = document.getElementById("saikolo");
 		div.innerHTML = "";
@@ -95,6 +96,12 @@ const ProgramGrid = () => {
 		otherprogramTab();
 	};
 
+	const amis = () => {
+		var div = document.getElementById("saikolo");
+		div.innerHTML = "";
+		amisTab();
+	};
+
 	const carryover = () => {
 		var div = document.getElementById("saikolo");
 		div.innerHTML = "";
@@ -109,13 +116,7 @@ const ProgramGrid = () => {
 		livestock();
 	};
 
-	const testProgramshld = () => {
-		var div = document.getElementById("saikolo");
-		div.innerHTML = "";
-
-		testPrograms();
-	};
-
+	
 	const postHarvesthld = () => {
 		var div = document.getElementById("saikolo");
 		div.innerHTML = "";
@@ -161,7 +162,7 @@ const ProgramGrid = () => {
 									cursor: "pointer",
 								}}
 								onClick={ApesTab}>
-								APES (Livestock)
+								APES
 							</Paper>
 						</Grid>
 
@@ -233,23 +234,6 @@ const ProgramGrid = () => {
 									borderRadius: "10px",
 									cursor: "pointer",
 								}}
-								onClick={testProgramshld}>
-								Test Programs
-							</Paper>
-						</Grid>
-						<Grid item xs={6} sm={3}>
-							<Paper
-								elevation={4}
-								style={{
-									padding: 40,
-									marginTop: 20,
-									width: "150px",
-									height: "150px",
-									textAlign: "center",
-
-									borderRadius: "10px",
-									cursor: "pointer",
-								}}
 								onClick={postHarvesthld}>
 								Post Harvest
 							</Paper>
@@ -269,6 +253,23 @@ const ProgramGrid = () => {
 								}}
 								onClick={rapidFoodhld}>
 								RFSA
+							</Paper>
+						</Grid>
+						<Grid item xs={6} sm={3}>
+							<Paper
+								elevation={4}
+								style={{
+									padding: 40,
+									marginTop: 20,
+									width: "150px",
+									height: "150px",
+									textAlign: "center",
+
+									borderRadius: "10px",
+									cursor: "pointer",
+								}}
+								onClick={amis}>
+								AMIS
 							</Paper>
 						</Grid>
 

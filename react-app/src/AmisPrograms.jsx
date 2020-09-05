@@ -1,19 +1,17 @@
 import React, { Component } from "react";
 import Select from "react-select";
 import Api from "./api";
-//import TrackerCaptureApp from "./ComputerDept/TrackerCaptureApp";
+import Button from "@material-ui/core/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { MenuItem } from "@material-ui/core";
 
-export default class ApesFormsFilter extends Component {
+export default class AmisPrograms extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
+			menuIsOpen: true,
 			TrackerCapturePrograms: [],
-			profilter: "APES",
-			Apesfilter: "FORM",
-			//	Cprograms: [],
+			profilter: "Amis",
 		};
 	}
 
@@ -21,7 +19,9 @@ export default class ApesFormsFilter extends Component {
 		Api.getDashboards()
 
 			.then((response) => {
-				this.setState({ TrackerCapturePrograms: response.programs });
+				this.setState({
+					TrackerCapturePrograms: response.programs,
+				});
 			})
 			.catch((error) => {
 				console.error("Error during data retrieval:", error);
@@ -30,26 +30,18 @@ export default class ApesFormsFilter extends Component {
 
 	render() {
 		const Tracker = this.state.TrackerCapturePrograms;
-		const { Apesfilter, profilter } = this.props;
 
+		// console.log (Tracker)
 		const ProgramList = Tracker.filter((namep) => {
-			// console.log (namep.displayName)
+			if (namep.attributeValues[0] != null) {
+				const name = namep.attributeValues[0];
+				//console.log(name.value);
+				const namef = name.value;
 
-			if (
-				namep.displayName
-					.toLowerCase()
-					.includes(this.state.profilter.toLowerCase())
-			) {
-				if (
-					namep.displayName
-						.toLowerCase()
-						.includes(this.state.Apesfilter.toLocaleLowerCase())
-				) {
-					return namep;
+				if (namef.toLowerCase() === this.state.profilter.toLowerCase()) {
+					return namep.name;
 				}
 			}
-
-			//console.log (namep)
 		});
 
 		return (
@@ -60,8 +52,12 @@ export default class ApesFormsFilter extends Component {
 						<div className="col-md-6">
 							<Select
 								options={ProgramList.map((prog) => ({
-									label: prog.displayName,
+									label: prog.name,
 								}))}
+								menuIsOpen={this.state.menuIsOpen}
+								onMenuClose={() =>
+									this.setState({ menuIsOpen: this.state.isClearable })
+								}
 								isClearable
 								className="mdb-select md-form"
 								searchable=""
@@ -72,6 +68,13 @@ export default class ApesFormsFilter extends Component {
 						<div className="col-md-4"></div>
 					</div>
 				</div>
+				<Button
+					variant="outlined"
+					color="primary"
+					size="large"
+					onClick={() => window.location.reload()}>
+					Back
+				</Button>
 			</div>
 		);
 	}

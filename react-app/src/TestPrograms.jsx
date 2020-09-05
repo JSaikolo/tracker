@@ -9,6 +9,7 @@ export default class TestPrograms extends Component {
 		super(props);
 
 		this.state = {
+			menuIsOpen:true,
 			TrackerCapturePrograms: [],
 			profilter: "Test Programs",
 		};
@@ -32,8 +33,8 @@ export default class TestPrograms extends Component {
 
 		// console.log (Tracker)
 		const ProgramList = Tracker.filter((namep) => {
-			if (namep.attributeValues[0] != null) {
-				const name = namep.attributeValues[0];
+			if (namep.attributeValues[1] != null) {
+				const name = namep.attributeValues[1];
 				//console.log(name.value);
 				const namef = name.value;
 
@@ -53,6 +54,8 @@ export default class TestPrograms extends Component {
 								options={ProgramList.map((prog) => ({
 									label: prog.name,
 								}))}
+								menuIsOpen={this.state.menuIsOpen}
+								onMenuClose={() => this.setState({ menuIsOpen: this.state.isClearable })}
 								isClearable
 								className="mdb-select md-form"
 								searchable=""

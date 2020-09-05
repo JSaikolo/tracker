@@ -30,7 +30,6 @@ export default class ThemesTesting extends Component {
 
 	render() {
 		const Tracker = this.state.TrackerCapturePrograms;
-		const { profilter } = this.props;
 
 		// console.log (Tracker)
 		const ProgramList = Tracker.filter((namep) => {

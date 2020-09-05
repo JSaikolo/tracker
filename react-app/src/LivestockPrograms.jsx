@@ -9,6 +9,7 @@ export default class LivestockPrograms extends Component {
 		super(props);
 
 		this.state = {
+			menuIsOpen:true,
 			TrackerCapturePrograms: [],
 			profilter: "livestock",
 		};
@@ -53,6 +54,8 @@ export default class LivestockPrograms extends Component {
 								options={ProgramList.map((prog) => ({
 									label: prog.name,
 								}))}
+								menuIsOpen={this.state.menuIsOpen}
+								onMenuClose={() => this.setState({ menuIsOpen: this.state.isClearable })}
 								isClearable
 								className="mdb-select md-form"
 								searchable=""

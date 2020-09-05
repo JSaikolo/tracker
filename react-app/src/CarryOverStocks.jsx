@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Select from "react-select";
 import Api from "./api";
-//import TrackerCaptureApp from "./ComputerDept/TrackerCaptureApp";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "@material-ui/core/Button";
 
@@ -10,6 +10,8 @@ export default class CarryOverStocks extends Component {
 		super(props);
 
 		this.state = {
+			
+			menuIsOpen: true,
 			TrackerCapturePrograms: [],
 			profilter: "Carryover Stocks",
 		};
@@ -21,6 +23,7 @@ export default class CarryOverStocks extends Component {
 			.then((response) => {
 				this.setState({
 					TrackerCapturePrograms: response.programs,
+					isLoading: !this.state.isLoading,
 				});
 			})
 			.catch((error) => {
@@ -54,6 +57,9 @@ export default class CarryOverStocks extends Component {
 								options={ProgramList.map((prog) => ({
 									label: prog.name,
 								}))}
+								
+								menuIsOpen={this.state.menuIsOpen}
+								onMenuClose={() => this.setState({ menuIsOpen: this.state.isClearable })}
 								isClearable
 								className="mdb-select md-form"
 								searchable=""

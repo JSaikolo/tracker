@@ -19,33 +19,7 @@ export default class HouseRegister extends Component {
 	componentDidMount() {
 		Api.getDashboards()
 
-			/*
-					{console(response.json()) })
-
-			.then(responsedata => {
-				console.log(responsedata);
-                 return responsedata;
-				
-			})
-			.then (data =>{ this.setState({ "TrackerCapturePrograms": data});})
-
-			.catch((error) => {
-				console.error("Error during data retrieval:", error);
-			});
-
-		}
-		*/
-
 			.then((response) => {
-				/*
-				let i = 0;
-					for( i; i <response.programs.length;  i++) {
-	 
-						
-						document.write(JSON.parse(response.programs[i]["displayName"])) ;
-					};
-				*/
-
 				this.setState({ TrackerCapturePrograms: response.programs });
 			})
 			.catch((error) => {
@@ -55,7 +29,6 @@ export default class HouseRegister extends Component {
 
 	render() {
 		const Tracker = this.state.TrackerCapturePrograms;
-		const { profilter } = this.props;
 
 		const ProgramList = Tracker.filter((namep) => {
 			// console.log (namep.displayName)

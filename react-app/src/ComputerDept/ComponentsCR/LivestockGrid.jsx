@@ -6,11 +6,20 @@ import { render } from "@testing-library/react";
 //import AppFilterAdv from "./AppFilterAdv";
 
 import LivestockApesTab from "./LivestockApesTab";
+import TestProgramsTab from "./TestProgramsTab";
 
 function LivestockTabAp() {
 	render(
 		<div>
 			<LivestockApesTab />
+		</div>
+	);
+}
+
+function TestProgramTabAp() {
+	render(
+		<div>
+			<TestProgramsTab />
 		</div>
 	);
 }
@@ -23,6 +32,12 @@ const LivestockGrid = () => {
 		LivestockTabAp();
 	};
 
+	const test = () => {
+		var div = document.getElementById("jacob");
+		div.innerHTML = "";
+
+		TestProgramTabAp();
+	};
 	return (
 		<div>
 			<Grid container id="jacob">
@@ -55,6 +70,25 @@ const LivestockGrid = () => {
 								}}
 								onClick={livestock}>
 								Livestock
+							</Paper>
+						</Grid>
+
+						<Grid item xs={6} sm={3}>
+							<Paper
+								elevation={4}
+								style={{
+									marginLeft: 5,
+									padding: 40,
+									marginTop: 20,
+									width: "150px",
+									height: "150px",
+									textAlign: "center",
+
+									borderRadius: "10px",
+									cursor: "pointer",
+								}}
+								onClick={test}>
+								Test Programs
 							</Paper>
 						</Grid>
 					</Grid>

@@ -6,8 +6,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import ApesFormsFilter from "./ApesFormsFilter";
-import ApesProgramsFilter from "./ApesProgramsFilter";
+import AmisPrograms from "../../AmisPrograms";
 
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
@@ -21,7 +20,7 @@ function TabPanel(props) {
 			{...other}>
 			{value === index && (
 				<Box p={3}>
-					<Typography>{children}</Typography>
+					<Typography component={"div"}>{children}</Typography>
 				</Box>
 			)}
 		</div>
@@ -48,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export default function ApesTabsAVD() {
+export default function AmisProTab() {
 	const classes = useStyles();
 	const [value, setValue] = React.useState(0);
 
@@ -64,18 +63,12 @@ export default function ApesTabsAVD() {
 					onChange={handleChange}
 					aria-label="simple tabs example"
 					style={{ marginLeft: "30%" }}>
-					<Tab label="Apes Programs" {...a11yProps(0)} />
-					<Tab label="Apes Surveys -Forms" {...a11yProps(1)} />
-					
+					<Tab label="Amis Programs" {...a11yProps(0)} />
 				</Tabs>
 			</AppBar>
 			<TabPanel value={value} index={0}>
-				<ApesProgramsFilter />
+				<AmisPrograms />
 			</TabPanel>
-			<TabPanel value={value} index={1}>
-				<ApesFormsFilter />
-			</TabPanel>
-			
 		</div>
 	);
 }
