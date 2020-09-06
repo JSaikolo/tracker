@@ -58,8 +58,6 @@ export default class OtherProgramsfilter extends Component {
 			if (namep.attributeValues != null) {
 				const namef = namep.attributeValues;
 
-				//console.log(namef);
-
 				if ((namef && namef.length) === 0) {
 					return namep.name;
 				}
@@ -70,14 +68,16 @@ export default class OtherProgramsfilter extends Component {
 			<div>
 				<div className="container">
 					<div className="row">
-						<div className="col-md-3" />
+						<div className="col-md-2" />
 						<div className="col-md-6">
 							<Select
 								options={ProgramList.map((prog) => ({
 									label: prog.name,
 								}))}
 								menuIsOpen={this.state.menuIsOpen}
-								onMenuClose={() => this.setState({ menuIsOpen: this.state.isClearable })}
+								onMenuClose={() =>
+									this.setState({ menuIsOpen: this.state.isClearable })
+								}
 								isClearable
 								className="mdb-select md-form"
 								searchable=""

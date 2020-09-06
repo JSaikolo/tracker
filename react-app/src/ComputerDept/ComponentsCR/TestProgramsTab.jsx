@@ -63,7 +63,7 @@ export default function TestProgramsTab() {
 					onChange={handleChange}
 					aria-label="simple tabs example"
 					style={{ marginLeft: "30%" }}>
-					<Tab label="Test Programs" {...a11yProps(0)} />
+					<Tab label="Test Program" {...a11yProps(0)} />
 				</Tabs>
 			</AppBar>
 			<TabPanel value={value} index={0}>

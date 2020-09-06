@@ -31,19 +31,15 @@ export default class ApesApes extends Component {
 		const Tracker = this.state.TrackerCapturePrograms;
 		const { profilter } = this.props;
 
-		// console.log (Tracker)
 		const ProgramList = Tracker.filter((namep) => {
 			if (namep.attributeValues[0] != null) {
 				const name = namep.attributeValues[0];
-				
-				//console.log(name.value);
+
 				const namef = name.value;
-				
 
 				if (namef.toLowerCase() === this.state.profilter.toLowerCase()) {
-					return namep.name ;
-                }
-                
+					return namep.name;
+				}
 			}
 		});
 
@@ -51,7 +47,7 @@ export default class ApesApes extends Component {
 			<div>
 				<div className="container">
 					<div className="row">
-						<div className="col-md-3"></div>
+						<div className="col-md-2"></div>
 						<div className="col-md-6">
 							<Select
 								options={ProgramList.map((prog) => ({
