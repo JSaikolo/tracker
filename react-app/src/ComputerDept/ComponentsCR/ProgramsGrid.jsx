@@ -59,7 +59,6 @@ function livestock() {
 	);
 }
 
-
 function postHarvest() {
 	render(
 		<div>
@@ -116,7 +115,6 @@ const ProgramGrid = () => {
 		livestock();
 	};
 
-	
 	const postHarvesthld = () => {
 		var div = document.getElementById("saikolo");
 		div.innerHTML = "";

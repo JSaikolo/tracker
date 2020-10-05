@@ -1,0 +1,116 @@
+body {
+	background-color: black;
+}
+.main {
+	margin: 8px;
+	height: 100%;
+	border-radius: 15px;
+	padding: 20px;
+	background-color: rgb(25, 15, 49);
+	margin-top: 0px;
+}
+#sideContent{
+
+}
+
+#table {
+	width: 100%;
+	margin: 2px;
+	height: 5px;
+	border-radius: 5px;
+	padding: 5px;
+	background-color: rgb(3, 39, 4);
+}
+#image {
+	height: 235px;
+	width: 400px;
+	background-image: url("./SaedLogo.png");
+	background-repeat: no-repeat;
+	margin-left: 2px;
+	border-radius: 10px;
+}
+
+#Header {
+	background-color: #518b1b;
+	margin: 0px;
+	height: 40px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+#Footer {
+	background-color:rgb(25, 15, 49);;
+	position: relative;
+	text-align: center;
+	color: rgb(255, 2, 2);
+	border-radius: 10px;
+}
+
+#sidebar {
+	float: right;
+	margin: 8px;
+
+	height: 100%;
+	padding: 5px;
+	background-color: rgb(25, 15, 49);
+	color: #0d9b2c;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "Courier New", Courier, monospace;
+}
+#backg {
+	margin-top: 10px;
+	color: #0d9b2c;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "Courier New", Courier, monospace;
+}
+
+#services {
+	color: rgb(19, 117, 134);
+}
+
+#Aservices {
+	color: #0d9b2c;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "Courier New", Courier, monospace;
+}
+#mis {
+	margin-left: 450px;
+	color: #0d9b2c;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "Courier New", Courier, monospace;
+}
+
+#vis {
+	margin-left: 450px;
+	margin-top: -20px;
+	color: #0d9b2c;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "Courier New", Courier, monospace;
+}
+
+#saedBack {
+	color: rgb(19, 117, 134);
+}
+
+#vision {
+	color: rgb(19, 117, 134);
+	margin-left: 450px;
+	width: 200%;
+	position: relative;
+}
+
+#mission {
+	color: rgb(19, 117, 134);
+	margin-left: 450px;
+	width: 200%;
+	position: relative;
+}
+
+#services {
+	color: rgb(19, 117, 134);
+}
